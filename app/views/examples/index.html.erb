@@ -1,24 +1,19 @@
-<script>
-$(function() {
-  $("#btn-reveal").click(function() {
-    $("#answer").removeClass("invisible");
-  })
-})
-</script>
+<% if @examples.length == 0 %>
+
+<div class="device-box">Sorry, there are no examples for this device. Please select another.</div>
+
+<% else %>
+
+<div class="device-box">You searched for <b><% @query %></b>.</div>
+
+<% @examples.each do |example | %>
 
 <div class="device-box">
 
-<div class="bg">
-
-<h1><%= @example.text %></h1>
-<br/><br/>
-
-<p><button id="btn-reveal">Reveal the device</button> <%= link_to 'Next!', root_path, id: 'btn-another' %></p>
-<br/>
-
-<h2 id="answer" class="invisible"><%= @example.device %></h1>
-<br/>
+<h1><%= example.text %></h1>
 
 </div>
 
-</div>
+<% end %>
+
+<% end %>
