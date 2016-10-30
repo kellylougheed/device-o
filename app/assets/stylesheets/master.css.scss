@@ -29,11 +29,36 @@ body {
   font-size: 3.5em;
 }
 
+.navbar-default button.navbar-toggle, .navbar-default button.navbar-toggle:focus,  {
+  border-color: rgb(217,138,159);
+  background-color: transparent;
+}
+
+.navbar-default button.navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-collapse {
+  border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: rgb(217,138,159);
+}
+
 .navbar-default .navbar-nav > li > a:link, .navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:active {
   color: rgb(217,138,159);
 }
 
+.navbar-default .navbar-nav .open ul.dropdown-menu > li > a:link, .navbar-default .navbar-nav .open ul.dropdown-menu > li > a:active, .navbar-default .navbar-nav .open ul.dropdown-menu > li > a:visited {
+    color: rgb(217,138,159);
+  }
+
 .navbar-default .navbar-nav > li > a:hover, .navbar .navbar-brand:hover, ul.dropdown-menu li a:hover {
+  color: rgb(242,204,181);
+}
+
+.navbar-default .navbar-nav .open ul.dropdown-menu > li > a:hover {
   color: rgb(242,204,181);
 }
 
@@ -52,6 +77,11 @@ ul.dropdown-menu a:link, ul.dropdown-menu a:active, ul.dropdown-menu a:visited {
 }
 
 .device-box {
-  width: 60%;
-  margin: 0 10% 0 30%;
+  width: 50%;
+  margin: 0 10% 0 40%;
+  margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  
 }
