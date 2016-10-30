@@ -2,6 +2,7 @@
 @import "bootstrap";
 
 @import url(http://fonts.googleapis.com/css?family=Oswald:300);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 
 body {
   background: url('books-min.jpg') no-repeat center center fixed; 
@@ -9,10 +10,13 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Roboto', arial;
+  letter-spacing: 1px;
  }
 
 .browse {
   margin: 15px 0 0 15px;
+  letter-spacing: 0px;
 }
 
 .search-form {
@@ -32,6 +36,7 @@ body {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 3.5em;
+  letter-spacing: 0px
 }
 
 .navbar-default button.navbar-toggle, .navbar-default button.navbar-toggle:focus,  {
@@ -55,35 +60,43 @@ body {
   color: rgb(217,138,159);
 }
 
-.navbar-default .navbar-nav .open ul.dropdown-menu > li > a:link, .navbar-default .navbar-nav .open ul.dropdown-menu > li > a:active, .navbar-default .navbar-nav .open ul.dropdown-menu > li > a:visited {
-    color: rgb(217,138,159);
-  }
-
 .navbar-default .navbar-nav > li > a:hover, .navbar .navbar-brand:hover, ul.dropdown-menu li a:hover {
   color: rgb(242,204,181);
 }
 
-.navbar-default .navbar-nav .open ul.dropdown-menu > li > a:hover {
-  color: rgb(242,204,181);
+li.search-form input[type="submit"] {
+  background-color: rgb(217,138,159);
+  color: rgb(91,4,47);
+  border: none;
+  border-radius: 10px;
+  padding: 3px 10px;
+  letter-spacing: 1px;
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
-.navbar-default .navbar-nav li > a.dropdown-toggle:link, .navbar-default .navbar-nav li > a.dropdown-toggle:active, .navbar-default .navbar-nav li > a.dropdown-toggle:visited {
+li.search-form input[type="submit"]:hover {
+  background-color: rgb(217, 174,184);
+}
+
+li.search-form select#example_device {
   background: transparent;
-  color: rgb(217,138,159);
+  color: rgb(217,174,184);
+  border: 1px solid rgb(217,174,184);
+  height: 27px;
+  min-width: 90px;
+  letter-spacing: 1px;
 }
 
-ul.dropdown-menu {
-  background: rgb(91,4,47);
-}
-
-ul.dropdown-menu a:link, ul.dropdown-menu a:active, ul.dropdown-menu a:visited {
-  background: rgb(91,4,47);
-  color: rgb(217,138,159);
-}
-
-a {
+a, a:link, a:active, a:visited {
   transition-property: color;
   transition-duration: .5s;
+  color: rgb(91,4,47);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(217,138,159);
 }
 
 .device-box {
@@ -100,6 +113,7 @@ a {
   color: rgb(217,174,184);
   border: none;
   border-radius: 10px;
+  letter-spacing: 1px;
   transition-property: all;
   transition-duration: .5s;
 }

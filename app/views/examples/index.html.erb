@@ -4,7 +4,11 @@
 
 <% else %>
 
-<div class="device-box">You searched for <b><% @query %></b>.</div>
+<% if @query %>
+
+<div class="device-box">Here are the examples of <b><%= @query %></b>. <a href="https://www.google.com/#q=<%= @query %>" target="_blank">What is <%= @query %>?</a></div>
+
+<% end %>
 
 <% @examples.each do |example | %>
 

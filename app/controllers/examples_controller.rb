@@ -3,7 +3,7 @@ class ExamplesController < ApplicationController
   def index
     if params[:example]
       @examples = Example.where(device: params[:example][:device].downcase)
-      @query = @examples[0].device
+      @query = params[:example][:device]
     else
       @examples = Example.all
     end
