@@ -1,2 +1,57 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:300);
+
+body {
+  background: url('books-min.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+.browse {
+  margin: 15px;
+}
+
+.navbar {
+  background: rgb(91,4,47);
+  border: none;
+  color: rgb(217,174,184);
+}
+
+.navbar .navbar-brand {
+  color: rgb(217,138,159);
+  font-family: 'Oswald', arial;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3.5em;
+}
+
+.navbar-default .navbar-nav > li > a:link, .navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:active {
+  color: rgb(217,138,159);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar .navbar-brand:hover, ul.dropdown-menu li a:hover {
+  color: rgb(242,204,181);
+}
+
+.navbar-default .navbar-nav li > a.dropdown-toggle:link, .navbar-default .navbar-nav li > a.dropdown-toggle:active, .navbar-default .navbar-nav li > a.dropdown-toggle:visited {
+  background: transparent;
+  color: rgb(217,138,159);
+}
+
+ul.dropdown-menu {
+  background: rgb(91,4,47);
+}
+
+ul.dropdown-menu a:link, ul.dropdown-menu a:active, ul.dropdown-menu a:visited {
+  background: rgb(91,4,47);
+  color: rgb(217,138,159);
+}
+
+.device-box {
+  width: 60%;
+  margin: 0 10% 0 30%;
+}
