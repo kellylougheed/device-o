@@ -1,10 +1,23 @@
-<div class="device-box">
+<script>
+$(function() {
+  $("#btn-reveal").click(function() {
+    $("#answer").removeClass("invisible");
+  })
+})
+</script>
 
-<h1>Device-o!</h1>
+<div class="device-box">
 
 <div class="bg">
 
 <h1><%= @example.text %></h1>
+<br/><br/>
+
+<p><button id="btn-reveal">Reveal the device</button> <%= link_to 'Next!', root_path, id: 'btn-another' %></p>
+<br/>
+
+<h2 id="answer" class="invisible"><%= @example.device %></h1>
+<br/>
 
 </div>
 

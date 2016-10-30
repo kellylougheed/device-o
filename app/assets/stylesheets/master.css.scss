@@ -76,12 +76,67 @@ ul.dropdown-menu a:link, ul.dropdown-menu a:active, ul.dropdown-menu a:visited {
   color: rgb(217,138,159);
 }
 
+a {
+  transition-property: color;
+  transition-duration: .5s;
+}
+
 .device-box {
-  width: 50%;
-  margin: 0 10% 0 40%;
+  width: 60%;
+  margin: 0 15% 0 25%;
   margin-top: 50px;
+  text-align: center;
+}
+
+.device-box .bg {
+  background-color: rgba(255,255,255,.5);
+  padding: 15px;
+  border-radius: 20px;
+}
+
+#btn-reveal, #btn-another:link, #btn-another:active, #btn-another:visited {
+  background: rgb(91,4,47);
+  color: rgb(217,174,184);
+  border: none;
+  border-radius: 10px;
+  transition-property: all;
+  transition-duration: .5s;
+}
+
+#btn-reveal {
+  padding: 10px;
+}
+
+#btn-another {
+  padding: 12px;
+  margin-left: 25px;
+}
+
+#btn-another:link, #btn-another:active, #btn-another:visited, #btn-another:hover {
+  text-decoration: none;
+}
+
+#btn-reveal:hover, #btn-another:hover {
+  background: rgb(217,174,184);
+  color: rgb(91,4,47);
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+h2#answer {
+  transition-property: all;
+  transition-duration: .5s;
+}
+
+.invisible {
+  opacity: 0;
 }
 
 @media (max-width: 767px) {
-  
+  .device-box {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
