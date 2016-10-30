@@ -44,13 +44,51 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Add Example</a></li>
+        <li> <!-- Button trigger modal -->
+          <%= link_to 'Add Example', '#', data: {toggle: 'modal', target: '#addExample'} %> </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
+<% if flash[:error].present? %>
+      <div class="alert alert-danger">
+        <%= flash[:error] %>
+      </div>
+      <br/>
+<% end %>
+ <% if flash[:success].present? %>
+      <div class="alert alert-success">
+        <%= flash[:success] %>
+      </div>
+      <br/>
+<% end %>
+
 <%= yield %>
+
+<!-- New fact modal -->
+  <div class="modal fade" id="addExample" tabindex="-1" role="dialog" aria-labelledby="addExampleLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h2>Add an example</h2>
+        </div>
+        <div class="modal-body">
+          <div class="form">
+            <%= simple_form_for Example.new do |f| %>
+              <%= f.input :text, label: "Example" %>
+              <br>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-submit" data-dismiss="modal">Close</button>
+          <%= f.submit 'Submit', class: 'btn btn-info' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

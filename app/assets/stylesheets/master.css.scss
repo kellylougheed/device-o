@@ -19,6 +19,7 @@ body {
   background: rgb(91,4,47);
   border: none;
   color: rgb(217,174,184);
+  margin: 0;
 }
 
 .navbar .navbar-brand {
@@ -133,6 +134,12 @@ h2#answer {
 .invisible {
   opacity: 0;
 }
+
+.alert {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 1px;
+ }
 
 @media (max-width: 767px) {
   .device-box {
