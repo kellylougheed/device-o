@@ -2,10 +2,10 @@ class ExamplesController < ApplicationController
   
   def index
     if params[:example]
-      @examples = Example.where(device: params[:example][:device].downcase)
+      @examples = Example.where(device: params[:example][:device].downcase).paginate(:page => params[:page], :per_page => 10)
       @query = params[:example][:device]
     else
-      @examples = Example.all
+      @examples = Example.all.paginate(:page => params[:page], :per_page => 10)
     end
   end
 

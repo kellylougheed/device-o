@@ -1,23 +1,19 @@
 <% if @examples.length == 0 %>
-
-<div class="device-box">Sorry, there are no examples for this device. Please select another.</div>
-
+  <div class="device-box">Sorry, there are no examples for this device. Please select another.</div>
 <% else %>
-
-<% if @query %>
-
-<div class="device-box">Here are the examples of <b><%= @query %></b>. <a href="https://www.google.com/#q=<%= @query %>" target="_blank">What is <%= @query %>?</a></div>
-
+  <% if @query %>
+    <div class="device-box">Here are the examples of <b><%= @query %></b>. <a href="https://www.google.com/#q=<%= @query %>" target="_blank">What is <%= @query %>?</a></div>
+  <% end %>
+  <% @examples.each do |example | %>
+    <div class="device-box">
+      <h1><%= example.text %></h1>
+    </div>
+  <% end %>
 <% end %>
+<br/><br/>
 
-<% @examples.each do |example | %>
-
-<div class="device-box">
-
-<h1><%= example.text %></h1>
-
-</div>
-
-<% end %>
-
+<% if @examples.length > 10 %>
+  <div class="flickr_pagination">
+    <%= will_paginate @examples %>
+  </div>
 <% end %>
