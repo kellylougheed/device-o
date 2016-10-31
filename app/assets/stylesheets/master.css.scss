@@ -171,6 +171,12 @@ h2#answer {
   letter-spacing: 1px;
  }
 
+ @media (max-width: 1000px) {
+  .navbar-right .menu-text {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .device-box {
     width: 90%;
