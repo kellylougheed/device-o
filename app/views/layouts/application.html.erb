@@ -25,7 +25,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="browse">Browse by device...</li>
+        <li class="menu-text">Browse by device...</li>
         <li class="search-form">
         <%= form_tag(examples_path, :method => "get") do %>
           <%= select("example", "device", Example.all.map{ |e| e.device }.uniq) %>
@@ -34,8 +34,15 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li> <!-- Button trigger modal -->
+        <% if user_signed_in? %>
+          <li> <!-- Button trigger modal -->
           <%= link_to 'Add Example', '#', data: {toggle: 'modal', target: '#addExample'} %> </li>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li class="menu-text">Sign up to add your own examples! </li>
+          <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

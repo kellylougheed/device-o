@@ -1,5 +1,6 @@
 class ExamplesController < ApplicationController
-  
+  before_action :authenticate_user!, only: [:new, :create]
+
   def index
     if params[:example]
       @examples = Example.where(device: params[:example][:device].downcase).paginate(:page => params[:page], :per_page => 10)
@@ -19,6 +20,7 @@ class ExamplesController < ApplicationController
       flash[:error] = 'Please enter a valid example longer than 10 characters with a device selected.'
       redirect_to root_path
     else
+      @example.user_id = current_user
       @example.save
       redirect_to root_path
       flash[:success] = 'Thanks for adding an example!'
