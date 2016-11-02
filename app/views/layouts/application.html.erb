@@ -30,7 +30,7 @@
         <li class="menu-text">Browse by device...</li>
         <li class="search-form">
         <%= form_tag(examples_path, :method => "get") do %>
-          <%= select("example", "device", Example.all.map{ |e| e.device }.uniq.sort) %>
+          <%= select("example", "device", Example.all.map{ |e| e.device }.uniq.sort, selected: 'alliteration') %>
           <%= submit_tag "Go!", :name => nil %>
         <% end %>
         </li>
