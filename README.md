@@ -17,7 +17,7 @@ Device-O! quizzes students on literary devices in preparation for AP English or 
 
 <li> Devise manages users, security, and logins.</li><br/>
 
-<li> Users can browse examples by device using the drop-down search menu.</li><br/>
+<li> Users can browse examples by device using the drop-down search menu. Search results are paginated with the will_paginate gem.</li><br/>
 
 <li> The data is queried and stored with PostgreSQL.</li><br/>
 </ul>
