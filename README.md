@@ -2,7 +2,7 @@
 
 <b>This app was built in Ruby on Rails, JavaScript, jQuery, HTML, CSS, and Bootstrap.</b>
 
-Device-O! quizzes students on literary devices in preparation for AP English or AP Latin.
+Device-o! quizzes students on literary devices in preparation for AP English or AP Latin.
 
 <h2>Features:</h2>
 
