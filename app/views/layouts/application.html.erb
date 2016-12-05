@@ -31,7 +31,7 @@
         <li class="search-form">
         <%= form_tag(examples_path, :method => "get") do %>
           <%= select("example", "device", Example.all.map{ |e| e.device }.uniq.sort, selected: 'alliteration') %>
-          <%= submit_tag "Go!", :name => nil %>
+          <%= submit_tag "Go!" %>
         <% end %>
         </li>
       </ul>
