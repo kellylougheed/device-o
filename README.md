@@ -4,6 +4,8 @@
 
 Device-o! quizzes students on literary devices in preparation for AP English or AP Latin.
 
+<img src="http://www.kellylougheed.com/images/projects/deviceo.png"/>
+
 <h2>Features:</h2>
 
 <ul>
