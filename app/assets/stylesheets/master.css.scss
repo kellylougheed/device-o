@@ -94,8 +94,7 @@ li.search-form select#example_device {
 }
 
 a, a:link, a:active, a:visited {
-  transition-property: color;
-  transition-duration: .5s;
+  transition: color .5s;
   color: rgb(91,4,47);
   text-decoration: none;
 }
